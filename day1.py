@@ -202,12 +202,12 @@ input = [1293,
 #task1
 """ for x in input:
     for y in input:
-        if(x + y == 2020):
+        if x + y == 2020:
             print(x*y) """
 
 from itertools import product
 for x, y in product(input, input):
-    if(x + y == 2020):
+    if x + y == 2020:
             print(x*y)
             break
     
@@ -215,10 +215,10 @@ for x, y in product(input, input):
 """ for x in input:
     for y in input:
         for z in input:
-            if(x + y + z == 2020):
+            if x + y + z == 2020:
                 print(x*y*z) """
 
 for x, y, z in product(input, input, input):
-    if(x + y + z == 2020):
+    if x + y + z == 2020:
             print(x*y*z)
             break

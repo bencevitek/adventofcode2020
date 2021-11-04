@@ -1017,7 +1017,7 @@ validpasscount = 0
 for index, passs in enumerate(password, start=0):
     count = passs.count(letter[index])
     z = minmax[index].split("-")
-    if(count >= int(z[0]) and count <= int(z[1])):
+    if count >= int(z[0]) and count <= int(z[1]):
         validpasscount += 1
 
 print(validpasscount)
@@ -1026,7 +1026,7 @@ print(validpasscount)
 validpasscount2 = 0
 for index, passs in enumerate(password, start=0):
     z = minmax[index].split("-")
-    if((passs[int(z[0])-1] == letter[index] and passs[int(z[1])-1] != letter[index]) or (passs[int(z[0])-1] != letter[index] and passs[int(z[1])-1] == letter[index])):
+    if (passs[int(z[0])-1] == letter[index] and passs[int(z[1])-1] != letter[index]) or (passs[int(z[0])-1] != letter[index] and passs[int(z[1])-1] == letter[index]):
         validpasscount2 += 1
 
 print(validpasscount2)

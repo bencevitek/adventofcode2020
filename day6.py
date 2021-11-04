@@ -8,7 +8,7 @@ with open('day6.txt') as f:
         if line in ['\n', '\r\n']:
             #group = ''.join(set(group))
             for char in group:
-                if(char not in unique):
+                if char not in unique:
                     unique = unique + char
             #print(unique)
             counter += len(unique)
@@ -28,7 +28,7 @@ with open('day6.txt') as f:
         if line in ['\n', '\r\n']:
             #print(group)
             for char in group:
-                if(group.count(char) == groupsize and char not in unique):
+                if group.count(char) == groupsize and char not in unique:
                     unique = unique + char
             counter += len(unique)
             group = ''

@@ -7,7 +7,7 @@ def check(lines,target):
     for line in lines:
         if re.search("^([a-z ]+) bags contain.*[1-9] "+target, line):
             match = re.search("^([a-z ]+) bags contain.*[1-9] "+target, line)
-            if(match.group(1) not in count):
+            if match.group(1) not in count:
                 count.append(match.group(1))
                 check(lines,match.group(1))
 
@@ -17,7 +17,7 @@ def check2(lines,target,multi):
     for line in lines:
         if re.search("^"+ target +" bags contain ", line):
             match = re.search("^"+ target +" bags contain (.*)", line)
-            if(match.group(1) != "no other bags."):
+            if match.group(1) != "no other bags.":
                 y = match.group(1).split(",")
                 for bag in y:
                     color = re.search("([1-9]) ([a-z ]+) bag", bag)

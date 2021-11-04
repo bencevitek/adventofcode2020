@@ -11,7 +11,7 @@ pidOK = 0
 with open('day4.txt') as f:
     for line in f:
         if line in ['\n', '\r\n']:
-            if(byrOK == 1 and iyrOK == 1 and eyrOK == 1 and hgtOK == 1 and hclOK == 1 and eclOK == 1 and pidOK == 1):
+            if byrOK == 1 and iyrOK == 1 and eyrOK == 1 and hgtOK == 1 and hclOK == 1 and eclOK == 1 and pidOK == 1:
                 validpasscount += 1
             byrOK = 0
             iyrOK = 0
@@ -53,7 +53,7 @@ pidOK = 0
 with open('day4.txt') as f:
     for line in f:
         if line in ['\n', '\r\n']:
-            if(byrOK == 1 and iyrOK == 1 and eyrOK == 1 and hgtOK == 1 and hclOK == 1 and eclOK == 1 and pidOK == 1):
+            if byrOK == 1 and iyrOK == 1 and eyrOK == 1 and hgtOK == 1 and hclOK == 1 and eclOK == 1 and pidOK == 1:
                 validpasscount2 += 1
             byrOK = 0
             iyrOK = 0
