@@ -16,7 +16,6 @@ with open('day6.txt') as f:
             unique = ''
 
 print(counter)
-f.close()
 
 #task2
 group = ''
@@ -39,4 +38,3 @@ with open('day6.txt') as f:
             groupsize += 1
 
 print(counter)
-f.close()

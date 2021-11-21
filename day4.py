@@ -37,8 +37,6 @@ with open('day4.txt') as f:
 
 print(validpasscount)
 
-f.close()
-
 #task2
 import re
 
@@ -85,5 +83,3 @@ with open('day4.txt') as f:
             pidOK = 1
 
 print(validpasscount2)
-
-f.close()

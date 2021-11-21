@@ -5,7 +5,7 @@ with open('day8.txt') as f:
 
 #task1
 accumulator = 0
-second = 0
+second = False
 usedcommands = []
 current = 0
 while not second:
@@ -25,21 +25,21 @@ while not second:
         else:
             current -= int(y[1][1:])
     if current in usedcommands:
-        second = 1
+        second = True
 
 print(accumulator)
 
 #task2
 accumulator = 0
-second = 0
+second = False
 usedcommands = []
 current = 0
 winner = len(commands) - 1
-finished = 0
+finished = False
 usedchanges = []
-changed = 0
+changed = False
 while not finished:
-    second = 0
+    second = False
     while not second:
         y = commands[current].split(" ")
         usedcommands.append(current)
@@ -48,7 +48,7 @@ while not finished:
                 y[0] = "jmp"
             elif(y[0] == "jmp"):
                 y[0] = "nop"
-            changed = 1
+            changed = True
             usedchanges.append(commands[current])
         if y[0] == "nop":
             current += 1
@@ -64,13 +64,13 @@ while not finished:
             else:
                 current -= int(y[1][1:])
         if current in usedcommands:
-            second = 1
+            second = True
             accumulator = 0
             usedcommands.clear()
             current = 0
-            changed = 0
+            changed = False
         if current == winner:
-            second = 1
-            finished = 1
+            second = True
+            finished = True
 
 print(accumulator)

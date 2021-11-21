@@ -32,8 +32,6 @@ with open('day5.txt') as f:
 
 print(seatID)
 
-f.close()
-
 #task2
 seats.sort()
 for index, seat in enumerate(seats, start=0):
