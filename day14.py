@@ -26,11 +26,11 @@ print(sum)
 from itertools import product
 memdict = {}
 def calculatevariations(bin, value):
-    indexes = [x for x, v in enumerate(bin) if v == 'X']
-    variationlist = list(map(list,product([0, 1], repeat=len(indexes))))
+    #indexes = [x for x, v in enumerate(bin) if v == 'X']
+    variationlist = list(map(list,product([0, 1], repeat=bin.count("X"))))
     for arrs in variationlist:
         temp = bin
-        for ind, num in enumerate(arrs, start=0):
+        for num in arrs:
             temp = temp.replace( "X", str(num), 1)
         memdict[int(temp,2)] = int(value)
 
