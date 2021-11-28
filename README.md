@@ -1,1 +1,1 @@
-# adventofcode2020
+# the worst possible solutions for adventofcode2020 problems
