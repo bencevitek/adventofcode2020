@@ -23,4 +23,4 @@ for x in range(100):
 print(inputstring[inputstring.find("1")+1:] + inputstring[:inputstring.find("1")])
 
 #task2
-
+#task
