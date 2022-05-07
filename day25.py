@@ -14,10 +14,10 @@ def getloop(key):
     logging.debug(f"loopnum: {loopnum}")
     return loopnum
 
-def encrytion(pkey, loop):
+def encryption(pkey, loop):
     encrypted = 1
     for x in range(loop):
         encrypted = encrypted * pkey % 20201227
     return encrypted
 
-logging.info(f"Loop: {encrytion(cardpub, getloop(doorpub))}")
+logging.info(f"Loop: {encryption(cardpub, getloop(doorpub))}")
